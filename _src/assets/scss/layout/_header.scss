@@ -1,0 +1,27 @@
+.header {
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid $header-outline;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  margin: 20px auto 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+
+  &__list-item {
+    list-style: none;
+    color: $light-text;
+    font-weight: 700;
+    text-align: start;
+  }
+
+  &__score {
+    background-color: $light-text;
+    padding: 10px 20px;
+    color: $header-outline;
+    border-radius: 10px;
+    text-align: center;
+  }
+}
