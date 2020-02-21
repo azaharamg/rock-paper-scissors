@@ -5,9 +5,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 		<title>Frontend Mentor | Rock, Paper, Scissors</title>
-
-		Score Rules You Picked The House Picked You Win You Lose Play Again
-
 		<style>
 			.attribution {
 				font-size: 11px;
@@ -19,9 +16,38 @@
 		</style>
 	</head>
 	<body>
-		<footer class="attribution">
-			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-			Coded by <a href="#">Azahara Martinez Garcia</a>.
+		<header class="header">
+			<ul class="header__list">
+				<li class="header__list-item">Rock</li>
+				<li class="header__list-item">Paper</li>
+				<li class="header__list-item">Scissors</li>
+			</ul>
+			<div class="header__score">
+				<h3 class="header__score-title">Score</h3>
+				<p class="header__score-score">0</p>
+			</div>
+		</header>
+		<main class="main">
+			<section class="main__section">
+				<img class="main__section-img" src="./images/icon-paper.svg" alt="paper" />
+				<img class="main__section-img" src="./images/icon-rock.svg" alt="rock" />
+				<img class="main__section-img" src="./images/icon-scissors.svg" alt="scissors" />
+			</section>
+		</main>
+		<footer>
+			<section class="footer__rules">
+				<h2 class="footer__rules-title">Rules</h2>
+				<p class="footer__rules-information">
+					Score Rules You Picked The House Picked You Win You Lose Play Again
+				</p>
+			</section>
+			<aside class="footer__attribution">
+				<p class="footer__attribution-information">
+					Challenge by
+					<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+				</p>
+				<p class="footer__attribution-information">Coded by <a href="#">Azahara Martinez Garcia</a>.</p>
+			</aside>
 		</footer>
 	</body>
 </html>
