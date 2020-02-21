@@ -2,13 +2,13 @@
   text-transform: uppercase;
   text-align: center;
   border: 2px solid $header-outline;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 500px;
+  width: 400px;
   margin: 20px auto 20px auto;
   padding: 10px;
-  border-radius: 10px;
 
   &__list-item {
     list-style: none;
