@@ -1,0 +1,49 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: rgba($dark-text, 0.5);
+
+  &__content {
+    background: $light-text;
+    text-align: center;
+    margin: 10% auto;
+    width: 21.875rem;
+    border-radius: 0.625rem;
+    padding: 3rem;
+    box-shadow: 0 0.3125rem 0.5rem 0 rgba(0, 0, 0, 0.2),
+      0 0.4375rem 1.25rem 0 rgba(0, 0, 0, 0.17);
+
+    animation-name: moldalopen;
+    animation-duration: 1s;
+    @keyframes modalopen {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    &-paragraph {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  }
+}
+
+// Modal results
+.win {
+  margin-bottom: 1rem;
+  color: $win-color;
+}
+
+.lose {
+  margin-bottom: 1rem;
+  color: $lose-color;
+}
