@@ -1,0 +1,58 @@
+.main {
+  &__choices {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &-img {
+      background: $light-text;
+      padding: 1.875rem;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover {
+        background: $quaternary-color;
+      }
+
+      @media (min-width: 768px) {
+        width: 12.5rem;
+      }
+    }
+  }
+}
+
+#paper {
+  border: 0.9375rem solid $secondary-color;
+}
+
+#rock {
+  border: 0.9375rem solid $primary-color;
+}
+
+#scissors {
+  border: 0.9375rem solid $tertiary-color;
+}
+
+.restart-btn {
+  display: none;
+  background-color: $light-text;
+  color: $quinary-color;
+  font-weight: bold;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 0.625rem;
+
+  &:hover {
+    background: $quaternary-color;
+    color: $light-text;
+  }
+}
