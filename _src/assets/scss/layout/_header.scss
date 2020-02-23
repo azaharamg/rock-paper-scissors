@@ -1,14 +1,13 @@
 .header {
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid $header-outline;
-  border-radius: 10px;
+  border: 0.125rem solid $quinary-color;
+  border-radius: 0.625rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 400px;
-  margin: 20px auto 20px auto;
-  padding: 10px;
+  margin: 1.25rem auto 1.25rem auto;
+  padding: 0.625rem;
 
   &__list-item {
     list-style: none;
@@ -19,9 +18,9 @@
 
   &__score {
     background-color: $light-text;
-    padding: 10px 20px;
-    color: $header-outline;
-    border-radius: 10px;
+    padding: 0.625rem 1.25rem;
+    color: $quinary-color;
+    border-radius: 0.625rem;
     text-align: center;
   }
 }
