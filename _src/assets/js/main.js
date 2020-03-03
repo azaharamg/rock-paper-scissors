@@ -121,14 +121,22 @@ const showWinner = (winner, computerChoice) => {
   modal.style.display = "block";
 };
 
+const showRestartButton = () => {
+  const { player, computer } = scoreboard;
+  if (player > 0 || computer > 0) {
+    restart.style.display = "inline-block";
+  }
+};
+
 // Play game
 const play = e => {
-  restart.style.display = "inline-block";
   const playerChoice = e.target.id;
   const computerChoice = getComputerChoice();
   const winner = getWinner(playerChoice, computerChoice);
 
   showWinner(winner, computerChoice);
+
+  showRestartButton();
 
   localStorage.setItem("score", JSON.stringify(scoreboard));
 };
@@ -161,3 +169,4 @@ restart.addEventListener("click", restartGame);
 // Starting the App
 getPreviousScore();
 updateScore();
+showRestartButton();
