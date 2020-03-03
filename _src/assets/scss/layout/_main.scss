@@ -1,10 +1,12 @@
 .main {
   &__choices {
+    //background-image: url(../assets/images/bg-triangle.svg);
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
     margin-top: 3rem;
     text-align: center;
+    justify-items: center;
 
     @media (min-width: 768px) {
       grid-template-columns: repeat(3, 1fr);

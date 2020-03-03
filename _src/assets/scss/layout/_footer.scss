@@ -1,35 +1,15 @@
-.footer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+.footer__attribution {
   margin: 1.25rem auto 1.25rem auto;
   padding: 1.25rem;
-  &__rules {
-    border: 0.125rem solid $quinary-color;
-    border-radius: 0.3125rem;
-    color: $light-text;
-    width: 2.5rem;
-    padding: 0rem 1.25rem;
-    text-align: center;
-    text-transform: uppercase;
 
-    &-title {
-      text-align: center;
-      font-size: 0.875rem;
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $quinary-color;
 
-  &__attribution {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
+  &-link {
+    text-decoration: none;
     color: $quinary-color;
-
-    &-link {
-      text-decoration: none;
-      color: $quinary-color;
-    }
   }
 }
