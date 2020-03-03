@@ -4,7 +4,6 @@
   }
 
   &__choices {
-    //background-image: url(../assets/images/bg-triangle.svg);
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
@@ -28,6 +27,7 @@
 
       @media (min-width: 768px) {
         width: 12.5rem;
+        height: 12.5rem;
       }
     }
   }
