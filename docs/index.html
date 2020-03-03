@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        />
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"
+        />
+        <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:600,700&display=swap"
+        rel="stylesheet" />
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        <title>Rock, Paper, Scissors</title>
+    </head>
+    
+    <body>
+        <div class="page">
+            <header class="header">
+                <ul class="header__list">
+                    <li class="header__list-item">Rock</li>
+                    <li class="header__list-item">Paper</li>
+                    <li class="header__list-item">Scissors</li>
+                </ul>
+                <div class="header__score">
+                     <h3 class="header__score-title">Score</h3>
+
+                    <div class="header__score-score" id="score">
+                        <p>Player: 0</p>
+                        <p>Computer: 0</p>
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                 <h2 class="main__title">Make Your Selection</h2>
+
+                <section class="main__choices">
+                    <img class="main__choices-img" id="paper" src="./assets/images/icon-paper.svg"
+                    alt="paper" />
+                    <img class="main__choices-img" id="rock" src="./assets/images/icon-rock.svg"
+                    alt="rock" />
+                    <img class="main__choices-img" id="scissors" src="./assets/images/icon-scissors.svg"
+                    alt="scissors" />
+                </section>
+                <button class="restart-btn" id="restart">Restart Game</button>
+            </main>
+            <!-- Modal -->
+            <div class="modal">
+                <div class="modal__content" id="result"></div>
+            </div>
+            <footer class="footer__attribution">
+                <p class="footer__attribution-information">Challenge by <a class="footer__attribution-link" href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank">Frontend Mentor</a
+    >.
+  </p>
+  <p class="footer__attribution-information">
+    Coded by
+    <a class="footer__attribution-link" href="#">Azahara Martinez Garcia</a>.</p>
+            </footer>
+        </div>
+        <script src="../assets/js/main.js"></script>
+    </body>
+
+</html>
