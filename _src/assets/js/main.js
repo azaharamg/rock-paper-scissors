@@ -5,9 +5,20 @@ const score = document.getElementById("score");
 const result = document.getElementById("result");
 const restart = document.getElementById("restart");
 const modal = document.querySelector(".modal");
+
 const scoreboard = {
   player: 0,
   computer: 0
+};
+
+const getPreviousScore = () => {
+  const previousScore = JSON.parse(localStorage.getItem("score"));
+
+  if (previousScore !== null) {
+    const { player, computer } = previousScore;
+    scoreboard.player = player;
+    scoreboard.computer = computer;
+  }
 };
 
 //Get computers choice
@@ -47,11 +58,20 @@ const getWinner = (playerChoice, computerChoice) => {
   }
 };
 
+// Update scoreboard using `score` and `scoreboard` global variables
+const updateScore = () => {
+  score.innerHTML = `
+  <p>Player: ${scoreboard.player}</p>
+  <p>Computer: ${scoreboard.computer}</p>
+  `;
+};
+
 // Show winner
 const showWinner = (winner, computerChoice) => {
   if (winner === "player") {
     //Inc player score
     scoreboard.player++;
+
     //Show modal result
     result.innerHTML = `
     <h1 class="modal__content-title win">You Win</h1>
@@ -67,6 +87,7 @@ const showWinner = (winner, computerChoice) => {
   } else if (winner === "computer") {
     //Inc computer score
     scoreboard.computer++;
+
     //Show modal result
     result.innerHTML = `
      <h1 class="modal__content-title lose">You Lose</h1>
@@ -95,10 +116,7 @@ const showWinner = (winner, computerChoice) => {
      `;
   }
   // Show score
-  score.innerHTML = `
-  <p>Player: ${scoreboard.player}</p>
-  <p>Computer: ${scoreboard.computer}</p>
-  `;
+  updateScore();
 
   modal.style.display = "block";
 };
@@ -111,6 +129,8 @@ const play = e => {
   const winner = getWinner(playerChoice, computerChoice);
 
   showWinner(winner, computerChoice);
+
+  localStorage.setItem("score", JSON.stringify(scoreboard));
 };
 
 //Clear modal
@@ -128,9 +148,16 @@ const restartGame = () => {
     <p>Player: 0</p>
     <p>Computer: 0</p>
   `;
+
+  // Delete localStorage
+  localStorage.removeItem("score");
 };
 
 // Event listeners
 choices.forEach(choice => choice.addEventListener("click", play));
 window.addEventListener("click", clearModal);
 restart.addEventListener("click", restartGame);
+
+// Starting the App
+getPreviousScore();
+updateScore();
