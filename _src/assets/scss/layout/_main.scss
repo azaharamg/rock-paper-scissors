@@ -1,4 +1,8 @@
 .main {
+  &__title {
+    color: $light-text;
+  }
+
   &__choices {
     //background-image: url(../assets/images/bg-triangle.svg);
     display: grid;
@@ -52,7 +56,7 @@
   outline: none;
   border: none;
   border-radius: 0.625rem;
-  margin-bottom: 1rem;
+  margin: 1.5rem;
   &:hover {
     background: $quaternary-color;
     color: $light-text;
