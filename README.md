@@ -19,3 +19,14 @@ Simple. If the player wins, they gain 1 point, if the computer wins, it wins one
 - Paper beats Rock
 - Rock beats Scissors
 - Scissors beats Paper
+
+## Technical tools
+
+- Vanilla JS
+- Layout with Sass and HTML5
+- Gulp
+- ZEIT
+
+## Installation
+
+To use the project in local, you need to install the dependencies of the project with `npm install` and start a local server with `npm start`
