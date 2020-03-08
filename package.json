@@ -1,7 +1,7 @@
 {
-  "name": "AdalabWebStarterKit",
-  "version": "2.0.2",
-  "description": "Adalab web starter kit",
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "rock-paper-scissors",
   "dependencies": {
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",
@@ -30,9 +30,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:Adalab/Adalab-web-starter-kit.git"
+    "url": "git+ssh://git@github.com:azaharamg/rock-paper-scissors.git"
   },
-  "author": "Adalab",
-  "license": "MIT",
-  "homepage": "https://github.com/Adalab/Adalab-web-starter-kit"
+  "author": "Azahara",
+  "license": "MIT"
 }
